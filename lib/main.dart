@@ -57,6 +57,11 @@ class _MyAppState extends State<MyApp> {
       setState(() => isConnected = false);
 
       // channel = IOWebSocketChannel.connect('ws://lcalmachine ip:8080'); // here will come the IP of your server or your lcalmachine ip with port 8080
+      // channel = IOWebSocketChannel.connect('ws://192.168.1.43:8080');
+
+        channel = IOWebSocketChannel.connect('wss://websocket-notification-backend.onrender.com');
+
+
 
 
       channel!.stream.listen((message) {
